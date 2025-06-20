@@ -1,11 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #363574;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,10 +36,12 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -65,4 +79,67 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.banner-container {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  overflow: hidden;
+  max-width: none;
+}
+
+.Movie {
+  margin-top: 3rem;
+}
+.Poster {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.Film {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 2;
+  object-fit: cover;
+  filter: invert(1);
+}
+
+.Card {
+  background-color: #fffffd;
+  color:#2a455c;
+  padding: 2em;
+  width: 15em;
+  border-radius: 1em;
+  box-shadow: 1px 1px 10px rgba(31, 31, 31, 0.538);
+}
+
+.cardDesc {
+  background-color:rgba(240, 228, 212, 0.566);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.desc-container {
+  background-color: #f9f7eb;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 2rem;
+  max-width: none;
+  color: #2a455c;
+}
+.banner-title {
+  color: #222e38;
+  margin: 1rem 0;
+  font-size: 3.2em;
+  text-align: center;
+  font-weight: bold;
 }

@@ -2,33 +2,26 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Movies from './components/Movies'
 
-function App() {
+
+const App = () => {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      <div className="banner-container">
+        <img className='Poster' src='src/imgs/banner.jpg' alt="Banner"/>
+        <img className='Film' src='src/imgs/film.png' alt="Film"/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='desc-container'>
+        <h2 className="banner-title">Movies in Bryant Park</h2>
+        <p>Bring a blanket and a friend, grab your spot on the lawn, 
+          and watch a feature film on the big screen under the city 
+          skies. The lawn opens at 5pm and films begin at 8pm. Enjoy the show!</p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <Movies />
+    </div>
   )
 }
 
